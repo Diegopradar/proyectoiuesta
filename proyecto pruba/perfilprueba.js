@@ -1,22 +1,24 @@
 let email= ["user123@gmail.com","admin123@gmail.com"];
 let password= ["user123","admin123"];
 let persona= ["u","a"];
+var leerdatos ="";
 
-document.getRelementById("tarjeta")addEventListener("submit", function(leerdatos)){
-	let ema= document.getRelementById("pass").value;
-	let pass= document.getEelemntById("email").value;
+document.getElementById("tarjeta").addEventListener("submit", function(leerdatos){
+	event.preventDefault()
+	console.log("lo lograste papito")
+	let ema= document.getElementById("pass").value;
+	let pass= document.getElementById("email").value;
 	
 function checkleerdatos(ema,pass){
-	tarjetaform = email.indexOF(ema);
+	let tarjetaform = email(ema);
 
-	if(tarjetaform ===0 || tarjetaemail===1){
-		if(pasword[tarjetaemail] === pass){
+	if(tarjetaform ===0 || tarjetaform===1){
+		if(password[tarjetaform] === pass){
 			return(persona[tarjetaform]);
 		}
 	}
-	else if { return null
-	}
-}
+	else  return null
+};
 
 let x = checkleerdatos(ema,pass)
 if(x === "u"){
@@ -29,4 +31,4 @@ if(x === "a"){
 if(x === null){
 	alert("datos no registrados");
 }
-};
+});
