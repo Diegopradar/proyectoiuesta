@@ -5,15 +5,14 @@ let persona= ["u","a"];
 document.getElementById("tarjeta").addEventListener("submit", function(event){
 	event.preventDefault()
 	console.log("lo lograste papito")
-	let ema= document.getElementById("pass").value;
-	let pass= document.getElementById("email").value;
+	let ema= document.getElementById("email").value;
+	let pass= document.getElementById("pass").value;
 
-	console.log(ema+"   "+pass)
+	console.log(ema+pass)
 function checkleerdatos(ema,pass){
-	let tarjetaform = ema;
+	let tarjetaform = email.indexOf(ema);
 
-	if(tarjetaform ===0 || tarjetaform===1){
-		console.log("si estan los datos")
+	if(tarjetaform === 0 || tarjetaform=== 1){
 		if(password[tarjetaform] === pass){
 			return(persona[tarjetaform]);
 		}
@@ -21,7 +20,7 @@ function checkleerdatos(ema,pass){
 	else  return null
 };
 
-let x = persona;
+let x = checkleerdatos(ema,pass)
 if(x === "u"){
 	alert("has iniciado sesión como usuario");
 }
@@ -29,7 +28,7 @@ if(x === "a"){
 	alert("has iniciado sesión como aministrador");
 	window.document("paginaadmin.html");
 }
-if(x === null){
+if(x == null){
 	alert("datos no registrados");
 }
 });

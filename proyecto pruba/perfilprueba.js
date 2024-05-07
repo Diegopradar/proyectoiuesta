@@ -5,8 +5,8 @@ let persona= ["u","a"];
 document.getElementById("tarjeta").addEventListener("submit", function(event){
 	event.preventDefault()
 	console.log("lo lograste papito")
-	let ema= document.getElementById("pass").value;
-	let pass= document.getElementById("email").value;
+	let ema= document.getElementById("email").value;
+	let pass= document.getElementById("pass").value;
 
 	console.log(ema+pass)
 function checkleerdatos(ema,pass){
