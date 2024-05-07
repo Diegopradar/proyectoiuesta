@@ -8,11 +8,12 @@ document.getElementById("tarjeta").addEventListener("submit", function(event){
 	let ema= document.getElementById("pass").value;
 	let pass= document.getElementById("email").value;
 
-	console.log(ema+pass)
+	console.log(ema+"   "+pass)
 function checkleerdatos(ema,pass){
 	let tarjetaform = ema;
 
 	if(tarjetaform ===0 || tarjetaform===1){
+		console.log("si estan los datos")
 		if(password[tarjetaform] === pass){
 			return(persona[tarjetaform]);
 		}
@@ -20,7 +21,7 @@ function checkleerdatos(ema,pass){
 	else  return null
 };
 
-let x = checkleerdatos(ema,pass)
+let x = persona;
 if(x === "u"){
 	alert("has iniciado sesión como usuario");
 }
